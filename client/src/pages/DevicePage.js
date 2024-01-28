@@ -1,11 +1,10 @@
 import React from "react";
+import ProductQuickviews from "../components/ProductQuickviews";
 
 const DevicePage = () => {
 
     return (
-        <div>
-            DevicePage
-        </div>
+        <ProductQuickviews />
     )
 }
 

@@ -1,8 +1,9 @@
-import { Fragment, useState } from 'react'
+import React, { Fragment, useState } from 'react'
 import { Dialog, Disclosure, Menu, Transition } from '@headlessui/react'
 import { XMarkIcon } from '@heroicons/react/24/outline'
 import { ChevronDownIcon, FunnelIcon, MinusIcon, PlusIcon, Squares2X2Icon } from '@heroicons/react/20/solid'
 import ProductList from "./ProductList";
+import ProductQuickviews from "./ProductQuickviews";
 
 const sortOptions = [
     { name: 'Most Popular', href: '#', current: true },
@@ -296,6 +297,7 @@ const ProductFilter = () => {
                     </section>
                 </main>
             </div>
+            {/*<ProductQuickviews />*/}
         </div>
     )
 }
