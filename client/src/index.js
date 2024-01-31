@@ -7,6 +7,7 @@ import UserStore from "./store/UserStore";
 import DeviceStore from "./store/DeviceStore";
 import {HelmetProvider} from "react-helmet-async";
 import { BrowserRouter } from 'react-router-dom';
+import {MaterialTailwindControllerProvider} from "./context";
 
 
 export const Context = createContext(null);
@@ -22,7 +23,9 @@ root.render(
         <HelmetProvider>
             <BrowserRouter>
                 <Suspense fallback={<div>Loading...</div>}> {/*loading ogtagorcelu hnaravorrutyun*/}
-                    <App />
+                    <MaterialTailwindControllerProvider>
+                        <App />
+                    </MaterialTailwindControllerProvider>
                 </Suspense>
             </BrowserRouter>
       </HelmetProvider>

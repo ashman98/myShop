@@ -8,29 +8,21 @@ import {REGISTRATION_ROUTE} from "../utils/consts";
 const AppRouter = () => {
     const isAuth = false;
     const {user} = useContext(Context);
+    const page = publicRoutes[0].pages;
+    console.log(page)
     return (
         <Routes>
             {
-                user.isAuth && authRoutes.map(({path,component}) => ( //проверка на авторизацию и создание маршрутов
-                    <Route
-                        key={path} //ключ
-                        path={path} //путь
-                        element={component} //компонент
-                        exact //exact - совпадение пути с путем в роуте
-                    />
-                ))
-            }
-            {
-                publicRoutes.map(({path, component}) => (
+                page.map(({path, component}) => (
                     <Route
                         key={path}
                         path={path}
                         element={component}
-                        exact
+                        // exact
                     />
                 ))
             }
-            <Route path={REGISTRATION_ROUTE} element={ <AuthPage /> } />
+            {/*<Route path={REGISTRATION_ROUTE} element={ <AuthPage /> } />*/}
         </Routes>
     )
 }

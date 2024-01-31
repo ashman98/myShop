@@ -2,6 +2,10 @@ material-kit-react/
 material-kit-react
 ./material-kit-react
 
+material-tailwind-dashboard-react/
+material-tailwind-dashboard-react
+./material-tailwind-dashboard-react
+
 # Logs
 logs
 *.log
